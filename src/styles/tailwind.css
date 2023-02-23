@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    @variants responsive {
+      /* Chrome, Safari and Opera */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+  
+      .no-scrollbar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+      }
+    }
+  }
+
+.scroller-y {
+    animation: 60s scroll-y alternate infinite ;
+}
+
+.scroller-x {
+    animation: 60s scroll-x alternate infinite ;
+}
+
+.scroller-onclick-2 {
+    animation: 2s scroll-onclick-x forwards ;
+}
+
+.scroller-onclick-3 {
+    animation: 2s scroll-onclick-2x forwards ;
+}
+
+.scroller-onclick-4 {
+    animation: 2s scroll-onclick-3x forwards ;
+}
+
+.scroller-onclick-5 {
+    animation: 2s scroll-onclick-4x forwards ;
+}
+
+.scroller-onclick-6 {
+    animation: 2s scroll-onclick-5x backwards ;
+}
+
+
+@keyframes scroll-y {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes scroll-x {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes scroll-onclick-x {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+@keyframes scroll-onclick-2x {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(-200%);
+    }
+}
+
+
+@keyframes scroll-onclick-3x {
+    from {
+        transform: translateX(-200%);
+    }
+
+    to {
+        transform: translateX(-300%);
+    }
+}
+
+
+@keyframes scroll-onclick-4x {
+    from {
+        transform: translateX(-300%);
+    }
+
+    to {
+        transform: translateX(-400%);
+    }
+}
+
+
+@keyframes scroll-onclick-5x {
+    from {
+        transform: translateX(-400%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes scroll-onclick-back-x {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
